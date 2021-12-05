@@ -34,7 +34,7 @@ setup(
 	long_description_content_type="text/markdown",
 
 	# Define the URL of the GitHub.
-	url='https://github.com/vinayphadnis/SpaceX-Python',
+	url='',
 
 	# Define the dependencies the library needs in order to run.
 	#install_requires=[
