@@ -1,5 +1,7 @@
 # Python Starter Package
-This is a basic python starter package to be used as a template for creating your own python packages. Github repo: https://github.com/ArcticTechnology/PythonStarterPackage
+This is a basic python starter package to be used as a template for creating your own python packages.
+* Github repo: https://github.com/ArcticTechnology/PythonStarterPackage
+* PyPi: https://pypi.org/project/PythonStarterPackage/
 
 ## Installation
 This library is hosted on PyPi and can be installed via ```pip```:
@@ -96,4 +98,9 @@ pip install PythonStarterPackage
 ```
 
 ## Support and Contributions
-If you would like to support this project financially feel free to donate to this direct bitcoin address: 1GZQY6hMwszqxCmbC6uGxkyD5HKPhK1Pmf
+Our software is open source and free for public use. If you found any of these repos useful and would like to support this project financially, feel free to donate to our bitcoin address.
+
+Bitcoin Address 1: 1GZQY6hMwszqxCmbC6uGxkyD5HKPhK1Pmf
+
+![alt text](https://github.com/ArcticTechnology/BitcoinAddresses/blob/master/btcaddr1.png?raw=true)
+
