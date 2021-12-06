@@ -1,6 +1,6 @@
 #!/usr/bin/python3 -B
 from random import sample
-from .utils.common_cmd import CommonCmd as cmd
+from .utils.commoncmd import CommonCmd as cmd
 
 class PythonStarterPackage:
 

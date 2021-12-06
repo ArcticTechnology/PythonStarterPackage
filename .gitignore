@@ -8,6 +8,7 @@
 .DS_Store
 .idea
 .installed.cfg
+.pypirc
 .nyc_output
 .cache/
 .ipynb_checkpoints/
@@ -25,7 +26,6 @@ demos/react/node_modules
 demos/react/lib
 demos/react/public/app.js
 dist/
-doc/
 integration-test-results/
 integration/js/logs/
 integration/js/node_modules

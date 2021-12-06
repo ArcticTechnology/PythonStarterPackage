@@ -2,13 +2,13 @@ from setuptools import setup
 from setuptools import find_packages
 
 # Load the README file.
-with open(file="README.md", mode="r") as readme_handle:
+with open(file='README.md', mode='r') as readme_handle:
 	long_description = readme_handle.read()
 
 setup(
 
 	# Define the library name, this is what is used along with `pip install`.
-	name='python_starter_package',
+	name='PythonStarterPackage',
 
 	# Define the Author of the repository.
 	author='Arctic',
@@ -21,7 +21,9 @@ setup(
 	#- MAJOR VERSION 0
 	#- MINOR VERSION 1
 	#- MAINTENANCE VERSION 0
-	version='0.1.0',
+	version='0.1.2',
+
+	license='MIT',
 
 	# Define a small description of the library. This appears
 	# when someone searches for the library on https://pypi.org/search.
@@ -31,18 +33,18 @@ setup(
 	long_description=long_description,
 
 	# Specifies that the long description is a MARKDOWN.
-	long_description_content_type="text/markdown",
+	long_description_content_type='text/markdown',
 
 	# Define the URL of the GitHub.
-	url='',
+	url='https://github.com/ArcticTechnology/PythonStarterPackage',
 
 	# Define the dependencies the library needs in order to run.
-	#install_requires=[
-	#	'random',
-	#],
+	install_requires=[
+		'setuptools>=49.2',
+	],
 
 	# Define the keywords of the library.
-	keywords='governments, finance, APIs',
+	keywords='starter, package, template',
 
 	# Define the package dir.
 	package_dir={'': 'src'},
