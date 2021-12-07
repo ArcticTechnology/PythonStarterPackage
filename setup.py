@@ -1,3 +1,4 @@
+import glob
 from setuptools import setup
 from setuptools import find_packages
 
@@ -21,7 +22,7 @@ setup(
 	#- MAJOR VERSION 0
 	#- MINOR VERSION 1
 	#- MAINTENANCE VERSION 0
-	version='0.1.2',
+	version='0.1.4',
 
 	license='MIT',
 
@@ -40,8 +41,11 @@ setup(
 
 	# Define the dependencies the library needs in order to run.
 	install_requires=[
-		'setuptools>=49.2',
+		'setuptools>=59.5',
 	],
+
+	# Define the python version necessary to run this library.
+	python_requires='>=3.8',
 
 	# Define the keywords of the library.
 	keywords='starter, package, template',
@@ -52,17 +56,20 @@ setup(
 	# Define the packages to "build."
 	packages=find_packages(where='src'),
 
-	# # Define any package data.
-	# package_data={
-	#	 # And include any files found subdirectory of the "td" package.
-	#	 "td": ["app/*", "templates/*"],
-	# },
+	# Define whether any package data should be included like photos and JSON files.
+	#include_package_data = True,
+	#package_data = {
+	#	'config': ['config/config.json'],
+	#},
 
-	# Define whether any package data should be included, like photos and JSON files.
-	include_package_data=True,
+	# Define any data_files that should be included like config and message catalogs.
+	data_files=[('PythonStarterPackage/config', glob.glob('config/*'))],
 
-	# Define the python version necessary to run this library.
-	python_requires='>=3.8',
+	# Define any scripts that should be included.
+	entry_points={
+		'console_scripts': [
+			'PythonStarterPackage = PythonStarterPackage.__main__:main',
+	],},
 
 	# Define classifiers that give some characteristics about the package.
 	# For a complete list go to https://pypi.org/classifiers/.

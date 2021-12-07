@@ -1,1 +1,1 @@
-setuptools==49.2.1.post20200807
+setuptools==59.5.0

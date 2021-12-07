@@ -1,36 +1,15 @@
-#!/usr/bin/python3 -B
 from random import sample
 from .utils.commoncmd import CommonCmd as cmd
+from .utils.configurations import Configurations
 
 class PythonStarterPackage:
 
 	def __init__(self):
-		self.responses = [
-			'The sign your looking for is right beside you.',
-			'You better believe it.',
-			'Follow your heart.',
-			'The answer is within you.',
-			'Listen to the little voice inside you.',
-			'It would be wise to make a plan.',
-			'It always seem to work out in the end.',
-			'Do not be afraid of that which is not worth fearing.',
-			'You create your own reality.',
-			'The truth will be realized.',
-			'Everything happens for a reason.',
-			'You miss one-hundred precent of the shots you did not take.',
-			'Set your mind to it and it will be yours.',
-			'Believe in yourself and have the right attitude.',
-			'Just do you.',
-			'Everyday is a miracle and a blessing.',
-			'Nothing is impossible to a willing heart.',
-			'Success lies with those who want it.',
-			'Do it right from the start.',
-			'You learn a little from success and a lot from failures.',
-			'Keep moving forward with humble hearts.',
-			'Take the high road.']
+		data = Configurations.get_config()
+		self.answers = data['answers']
 
 	def get_response(self):
-		return sample(self.responses, 1)[0]
+		return sample(self.answers, 1)[0]
 
 	def splashscreen(self):
 		cmd.cls()
@@ -73,8 +52,3 @@ class PythonStarterPackage:
 
 			if select == 'a':
 				self.option_a()
-
-if __name__ == '__main__':
-	python_starter = PythonStarterPackage()
-	python_starter.run()
-
