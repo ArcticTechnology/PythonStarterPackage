@@ -5,6 +5,10 @@
 *.tmp
 *.egg-info/
 .config
+.config-c
+.config-d
+.config-example
+.config-NAKED
 .DS_Store
 .idea
 .installed.cfg

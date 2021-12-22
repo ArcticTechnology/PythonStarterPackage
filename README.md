@@ -8,10 +8,9 @@ This library is hosted on PyPi and can be installed via ```pip```:
 ```
 pip3 install PythonStarterPackage
 ```
-For manual install, see below.
 
 ### Manual Install
-To manually install this package, clone this repo to your local system. After you clone the repo, navigate into the package to where the ```setup.py``` file is. Then you can use the ```pip install -e .``` command. This will install the package and all its dependencies editable mode. Then you can use the package locally or use it as the starting point for building out your own package.
+To manually install this package, clone this repo to your local system. After you clone the repo, navigate into the package to where the ```setup.py``` file is. Then you can use the ```pip3 install -e .``` command. This will install the package and all its dependencies editable mode. Then you can use the package locally or use it as the starting point for building out your own package.
 ```
 pip3 install -e .
 ```
@@ -29,7 +28,7 @@ python_starter.run()
 ```
 
 ## Documentation
-The purpose of this project is to show you how to create a standard python package from scratch. This project is inspired by Sigma-Coding (https://github.com/areed1192/sigma-coding), it is a great detailed guide on deploying python packages.
+The purpose of this project is to show you how to create a standard python package from scratch. This project is inspired by @iamtennislover's excellent getmyip package (https://github.com/iamtennislover/getmyip) and @sigma-coding's great guide on deploying python packages (https://github.com/areed1192/sigma-coding).
 
 ### Setup
 In order to setup the your own standard python package from scratch do the following:
@@ -40,9 +39,9 @@ In order to setup the your own standard python package from scratch do the follo
 * src/python_starter_package - Core directory containing all the files that make up your program as well as ```__init__.py``` which is the entry point to our package.
   * utils - Sub-directory of python_starter_package containing any utility files for your program.
 * test - Directory containing all your test scripts.
-* ```main.py``` - Script to run your application.
 * .gitignore - Git ignore file for specifying the files that you want git to ignore.
 * LICENSE - File defining your package's license.
+* ```main.py``` - Script to run your application.
 * README.md - Readme file for documentation.
 * requirements.txt - File defining all the requirements of your package.
 * setup.py - Script to build your package.
@@ -62,7 +61,7 @@ pip3 uninstall PythonStarterPackage
 ### Deployment
 Do the following to create the deployment for the package.
 
-1. Create (or overwrite) the requirements.txt document with ```pipreqs```. This is an extremely useful tool because it automatically finds all of the relavent versions of dependencies your package relies on and puts them into the ```requirements.txt``` file. If you don't have ```pipreqs```, install it with ```pip install pipreqs```.
+1. Create (or overwrite) the requirements.txt document with ```pipreqs```. This is an extremely useful tool because it automatically finds all of the relevant versions of dependencies your package relies on and puts them into the ```requirements.txt``` file. If you don't have ```pipreqs```, install it with ```pip install pipreqs```.
 ```
 pipreqs --force --encoding utf-8
 ```
@@ -95,7 +94,7 @@ twine upload dist/*
 ```
 pip install PythonStarterPackage
 ```
-Note: If you get a "Requrements already satisfied..." for PythonStarterPackage when trying to install, it may be because ```pip``` still thinks you have the package already installed from the testing earlier. To cleanly break that connection, simply go to ```./src/``` and delete the ```PythonStarterPackage.egg-info``` directory and its contents. Then try uninstalling and reinstalling again:
+Note: If you get a "Requirements already satisfied..." for PythonStarterPackage when trying to install, it may be because ```pip``` still thinks you have the package already installed from the testing earlier. To cleanly break that connection, simply go to ```./src/``` and delete the ```PythonStarterPackage.egg-info``` directory and its contents. Then try uninstalling and reinstalling again:
 3. Finally, run the ```main.py``` to test that the package is working.
 ```
 ./main.py
@@ -108,4 +107,3 @@ Our software is open source and free for public use. If you found any of these r
 Bitcoin Address 1: 1GZQY6hMwszqxCmbC6uGxkyD5HKPhK1Pmf
 
 ![alt text](https://github.com/ArcticTechnology/BitcoinAddresses/blob/master/btcaddr1.png?raw=true)
-

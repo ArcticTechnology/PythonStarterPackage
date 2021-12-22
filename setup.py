@@ -22,13 +22,13 @@ setup(
 	#- MAJOR VERSION 0
 	#- MINOR VERSION 1
 	#- MAINTENANCE VERSION 0
-	version='0.1.4',
+	version='0.1.5',
 
 	license='MIT',
 
 	# Define a small description of the library. This appears
 	# when someone searches for the library on https://pypi.org/search.
-	description='A python starter package to be used as a template for creating your own python packages.',
+	description='Python starter package, a template for creating your own python packages.',
 
 	# Define a long description which is set to README file.
 	long_description=long_description,
@@ -56,19 +56,18 @@ setup(
 	# Define the packages to "build."
 	packages=find_packages(where='src'),
 
-	# Define whether any package data should be included like photos and JSON files.
-	#include_package_data = True,
+	# Define whether any package data should be included like sample data, etc.
 	#package_data = {
-	#	'config': ['config/config.json'],
+	#	'data': ['data/data.json'],
 	#},
 
-	# Define any data_files that should be included like config and message catalogs.
+	# Define any data files that should be included like config, message catalogs, environmental variables.
 	data_files=[('PythonStarterPackage/config', glob.glob('config/*'))],
 
 	# Define any scripts that should be included.
 	entry_points={
 		'console_scripts': [
-			'PythonStarterPackage = PythonStarterPackage.__main__:main',
+			'PythonStarterPackage = PythonStarterPackage.main:main',
 	],},
 
 	# Define classifiers that give some characteristics about the package.
@@ -83,6 +82,7 @@ setup(
 		# Define the audience this library is intended for.
 		'Intended Audience :: Developers',
 		'Intended Audience :: Science/Research',
+		'Intended Audience :: Information Technology',
 		'Intended Audience :: Financial and Insurance Industry',
 
 		# Define the license that guides the library.
@@ -103,8 +103,8 @@ setup(
 		'Programming Language :: Python :: 3.8',
 
 		# Define the topics that the library covers.
-		'Topic :: Database',
 		'Topic :: Education',
-		'Topic :: Office/Business'
+		'Topic :: Software Development',
+		'Topic :: Software Development :: Libraries'
 	]
 )

@@ -3,8 +3,7 @@ import sys
 from python_starter_package import *
 
 def main(args=None):
-	if args is None:
-		args = sys.argv[1:]
+	if args is None: args = sys.argv[1:]
 
 	python_starter = PythonStarterPackage()
 	python_starter.run()

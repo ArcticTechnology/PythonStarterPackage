@@ -1,11 +1,11 @@
 from random import sample
 from .utils.commoncmd import CommonCmd as cmd
-from .utils.configurations import Configurations
+from .utils.configparser import ConfigParser
 
 class PythonStarterPackage:
 
 	def __init__(self):
-		data = Configurations.get_config()
+		data = ConfigParser.get_config()
 		self.answers = data['answers']
 
 	def get_response(self):
