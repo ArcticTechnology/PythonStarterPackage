@@ -62,11 +62,6 @@ pipreqs --force --encoding utf-8
 ```
 2. Once the ```requirements.txt``` is updated, check to see if there is any additional dependencies that need to be added or updated in setup.cfg under the ```install_requires =```. If so, add or update it.
 
-##### lists the contents of the package:
-```
-unzip -l dist/*.whl && tar --list -f dist/*.tar.gz
-```
-
 ### Deployment
 Once the package is ready, we can work on deploying the package.
 
@@ -106,14 +101,12 @@ twine upload dist/*
 ```
 2. Install your package with ```pip```.
 ```
-pip install PythonStarterPackage
+pip3 install PythonStarterPackage
 ```
-Note: If you get a "Requirements already satisfied..." for PythonStarterPackage when trying to install, it may be because ```pip``` still thinks you have the package already installed from the testing earlier. To cleanly break that connection, simply go to ```./src/``` and delete the ```PythonStarterPackage.egg-info``` directory and its contents. Then try uninstalling and reinstalling again:
-3. Finally, run the ```main.py``` to test that the package is working.
-```
-./main.py
-```
-4. To uninstall: ```pip uninstall PythonStarterPackage```
+Note: If you get a "Requirements already satisfied..." for PythonStarterPackage when trying to install, it may be because ```pip``` still thinks you have the package already installed from the testing earlier. To cleanly break that connection, simply delete the ```./src/PythonStarterPackage.egg-info```. Then try uninstalling and reinstalling again.
+
+3. Finally, run the app with: ```pythonstarterpackage```.
+4. Uninstall with: ```pip3 uninstall PythonStarterPackage```.
 
 ## Support and Contributions
 Our software is open source and free for public use. If you found any of these repos useful and would like to support this project financially, feel free to donate to our bitcoin address.

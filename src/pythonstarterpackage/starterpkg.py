@@ -28,6 +28,10 @@ class StarterPkg:
 		return sample(self.answers, 1)[0]
 
 	def get_myip(self):
+		"""
+		Modern way to get get my ip using requests. See this post:
+		https://stackoverflow.com/questions/22492484/how-do-i-get-the-ip-address-from-a-http-request-using-the-requests-library/22513161#22513161
+		"""
 		resp = requests.get('https://www.google.com', stream=True)
 		return resp.raw._connection.sock.getsockname()
 
