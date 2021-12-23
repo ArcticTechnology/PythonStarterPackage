@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import importlib.resources
 
 class ConfigParser:
 
@@ -20,7 +21,12 @@ class ConfigParser:
 		elif dev_exists == True:
 			file = dev_file
 		else:
-			file = None
+			return {'status': 400, 'message': 'Could not find config file.', 'output': None}
 
+		output = self.read_file(file)
+		return {'status': 200, 'message': 'Read config file complete.', 'output': output}
+
+	@classmethod
+	def read_file(self, file):
 		with open(file, 'r') as f:
 			return json.load(f)

@@ -17,7 +17,6 @@
 .cache/
 .ipynb_checkpoints/
 .idea/
-bin/
 develop-eggs/
 node_modules/
 Libraries/

@@ -24,4 +24,6 @@ If you have a testpypi account with a test api token you can add it to ```.pypir
 username = __token__
 password = pypi-OFJou945u2fd0i94u93ut....
 ```
+
+### Result
 Now your account should be all setup be used to upload to PyPi.
