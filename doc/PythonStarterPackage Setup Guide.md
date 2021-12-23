@@ -48,7 +48,7 @@ packages = find:
 * ```install_requires =``` - Here you can list all of your package dependencies. The ```pipreqs``` tool makes it easy to map your package dependencies. Simply use ```pipreqs --force --encoding utf-8``` to create a requirements.txt file to help you identify the dependencies.
 * ```python_requires = >=3.8``` - Python version required to run your package.
 * ```package_dir = =src``` - This is the source directory of your package.
-* ```packages = find:``` - This is the key command that tells setuptools to find the resouces of your package.
+* ```packages = find:``` - This is the key command that tells setuptools to find the resources of your package.
 3. ```[options.packages.find]``` - Allows you to specify where you want ```packages = find:``` to find your resources.
 ```
 [options.packages.find]

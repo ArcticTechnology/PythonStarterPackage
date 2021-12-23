@@ -1,5 +1,5 @@
 # Python Starter Package
-This is a basic python starter package to be used as a template for creating your own python packages. See "PythonStarterPackage Setup Guide.md" in ```doc/``` for a detailed explaination of the package resources.
+This is a basic python starter package to be used as a template for creating your own python packages. See "PythonStarterPackage Setup Guide.md" in ```doc/``` for a detailed explanation of the package resources.
 * Github repo: https://github.com/ArcticTechnology/PythonStarterPackage
 * PyPi: https://pypi.org/project/PythonStarterPackage/
 
@@ -32,7 +32,7 @@ The purpose of this project is to show you how to create a standard python packa
 See "PythonStarterPackage Setup Guide.md" in ```doc/``` for a detailed walkthrough of what each of the package resources do. Once you have an understanding of this package, you can clone this package to your local directory and proceed to testing and deployment.
 
 ### Testing
-In the directory containing the ```setup.py``` file, you can test the package by installing it in ```pip3``` editable mode. This will allow you make changes to it and test it without having to push the changes everytime.
+In the directory containing the ```setup.py``` file, you can test the package by installing it in ```pip3``` editable mode. This will allow you make changes to it and test it without having to push the changes each time.
 1. Use ```pip3``` to install the package in editable mode:
 ```
 pip3 install -e .
