@@ -36,6 +36,15 @@ classifiers =
 	Programming Language :: Python :: 3 :: Only
 	Programming Language :: Python :: 3.8
 ```
+* ```version``` - Follows the convention: major.minor.maintenance
+* ```classifiers``` - See https://pypi.org/classifiers/ for list of classifiers.
+* Deployment status classifiers:
+```
+Development Status :: 3 - Alpha
+Development Status :: 4 - Beta
+Development Status :: 5 - Production/Stable
+```
+
 2. ```[options]``` - This section contains the critical configurations that tells setuptools what dependencies the package has, which python version the package requires, where to find the package, etc.
 ```
 [options]
@@ -49,23 +58,27 @@ packages = find:
 * ```python_requires = >=3.8``` - Python version required to run your package.
 * ```package_dir = =src``` - This is the source directory of your package.
 * ```packages = find:``` - This is the key command that tells setuptools to find the resources of your package.
+
 3. ```[options.packages.find]``` - Allows you to specify where you want ```packages = find:``` to find your resources.
 ```
 [options.packages.find]
 where = src
 ```
+
 4. ```[options.entry_points]``` - This is where you define the entry points to your app. See this guide for more on entry points: https://setuptools.pypa.io/en/stable/userguide/entry_point.html
 ```
 [options.entry_points]
 console_scripts =
 	PythonStarterPackage = pythonstarterpackage.main:main
 ```
+
 5. ```[options.package_data]``` - This defines files located inside your package that should be included in the build. Things like app assets, environmental variables, photos, etc.
 ```
 [options.package_data]
 data =
 	data/*.json
 ```
+
 6. ```[options.data_files]``` - This defines the files located outside your package that should be included in the build. Things like configurations, message catalogs, external data, sample data, etc.
 ```
 [options.data_files]

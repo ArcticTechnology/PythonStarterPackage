@@ -12,7 +12,7 @@ pip3 install PythonStarterPackage
 ## Usage
 After installation, you can run this app in your terminal with this command:
 ```
-PythonStarterPackage
+pythonstarterpackage
 ```
 You can also run it with ```python3 -m```:
 ```
