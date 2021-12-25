@@ -86,7 +86,7 @@ pythonstarterpackage
 ```
 pip3 uninstall PythonStarterPackage
 ```
-6. If there are any issues in the above you can always uninstall the package and delete the distributions then proceed to troubleshoot the issue. Once complete start over from the beginning. The commands below allows you to delete the distributions. 
+If there are any issues in the above you can always uninstall the package and delete the distributions then proceed to troubleshoot the issue. Once complete start over from the beginning. The commands below allows you to delete the distributions.
 ```
 rm -rf build dist src/*.egg-info
 ```
