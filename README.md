@@ -3,6 +3,33 @@ This is a basic python starter package to be used as a template for creating you
 * Github repo: https://github.com/ArcticTechnology/PythonStarterPackage
 * PyPi: https://pypi.org/project/PythonStarterPackage/
 
+## Prerequisites
+The Python Starter Package app is intended for the Linux terminal and should work on it out of the box. However, you may need to add ```~/.local/bin/``` to PATH if you are getting a ```command not found``` error when trying to run the app. See this thread for details: https://stackoverflow.com/a/34947489. To add ```~/.local/bin/``` to PATH do the following:
+1. Add ```export PATH=~/.local/bin:$PATH``` to ```~/.bash_profile```.
+```
+echo export PATH=~/.local/bin:$PATH > ~/.bash_profile
+````
+2. Execute command.
+```
+source ~/.bash_profile
+```
+
+This app can work for Windows and Mac. It is recommended to run it on the Git Bash terminal. Here are the instructions for installing and setting up Git Bash:
+
+1. Go to https://git-scm.com/downloads and click download.
+```
+Version >= 2.34.1
+```
+2. During the installation setup, make sure to include OpenSSH. Recommenced setting should be fine:
+```
+Use bundled OpenSSH - This uses ssh.exe that comes with Git.
+```
+3. Leave the other settings as default, click through, and install.
+
+IMPORTANT: For Windows, run this app on the ```bash.exe``` terminal rather ```git-bash.exe```. There is a known issue with ```git-bash.exe``` messing up Python ```os``` commands in ```import os```. See this thread for details: https://stackoverflow.com/questions/33622087/composer-installation-error-output-is-not-a-tty-input-is-not-a-tty/33623136#33623136.
+* ```bash.exe``` can be found in your Git folder in the ```bin/``` directory.
+* For example: If ```git-bash.exe``` is here ```C:\Program Files\Git\git-bash.exe``` then you should find ```bash.exe``` here ```C:\Program Files\Git\bin\bash.exe```.
+
 ## Installation
 This library is hosted on PyPi and can be installed via ```pip```:
 ```
@@ -53,6 +80,13 @@ python3 ./test/test_main.py
 ```
 pip3 uninstall PythonStarterPackage
 ```
+
+Note: It is recommended that you use a virtual environment when testing your package.
+1. To create a virtual environment:
+```
+virtualenv venv
+```
+2. Activate the environment use: ```. venv/bin/activate```. On Windows it may be: ```. venv/Script/activate```.
 
 ### Dependency Mapping
 Next, make sure to check the package dependencies and update the setup.cfg file as needed. To do this:

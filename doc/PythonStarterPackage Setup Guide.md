@@ -69,7 +69,7 @@ where = src
 ```
 [options.entry_points]
 console_scripts =
-	PythonStarterPackage = pythonstarterpackage.main:main
+	pythonstarterpackage = pythonstarterpackage.main:main
 ```
 
 5. ```[options.package_data]``` - This defines files located inside your package that should be included in the build. Things like app assets, environmental variables, photos, etc.
@@ -82,7 +82,7 @@ data =
 6. ```[options.data_files]``` - This defines the files located outside your package that should be included in the build. Things like configurations, message catalogs, external data, sample data, etc.
 ```
 [options.data_files]
-PythonStarterPackage/config = config/config.json
+pythonstarterpackage/config = config/config.json
 ```
 
 ### Package Files
