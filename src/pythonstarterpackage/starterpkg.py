@@ -42,7 +42,7 @@ class StarterPkg:
 	def optionscreen(self):
 		print(' ')
 		print('What would you like to do?')
-		print('(a) Ask me a question, (ip) Get my IP, (d) Get package data (q) Quit')
+		print('(a) Ask me a question (ip) Get my IP (d) Get package data (q) Quit')
 
 	def option_a(self):
 		os.system('clear')
@@ -73,7 +73,7 @@ class StarterPkg:
 			select = input()
 
 			if select not in ['a', 'ip', 'd', 'q']:
-				#'(a) Ask me a question, (ip) Get my IP, (d) Get package data (q) Quit'
+				#'(a) Ask me a question (ip) Get my IP (d) Get package data (q) Quit'
 				os.system('clear'); print('Invalid selection. Try again.')
 
 			if select == 'q':
