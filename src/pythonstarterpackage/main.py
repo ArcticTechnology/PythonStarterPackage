@@ -1,5 +1,4 @@
 #!/usr/bin/python3 -B
-import configparser
 from .starterpkg import StarterPkg
 from .utils.configparser import ConfigParser
 
