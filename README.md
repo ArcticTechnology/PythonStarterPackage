@@ -4,36 +4,23 @@ This is a basic python starter package to be used as a template for creating you
 * PyPi: https://pypi.org/project/PythonStarterPackage/
 
 ## Prerequisites
-The Python Starter Package app is intended for the Linux terminal and should work on it out of the box. However, you may need to add ```~/.local/bin/``` to PATH if you are getting a ```command not found``` error when trying to run the app. See this thread for details: https://stackoverflow.com/a/34947489. To add ```~/.local/bin/``` to PATH do the following:
-1. Add ```export PATH=~/.local/bin:$PATH``` to ```~/.bash_profile```.
-```
-echo export PATH=~/.local/bin:$PATH > ~/.bash_profile
-````
-2. Execute command.
-```
-source ~/.bash_profile
-```
+This app should would out of the box for Linux on a Linux terminal. For Windows and Mac, it is recommended to run this app on a linux emulation layer such as the Git Bash terminal. See the "Instructions for Git Bash" section for details.
 
-This app can work for Windows and Mac. It is recommended to run it on the Git Bash terminal. Here are the instructions for installing and setting up Git Bash:
-
-1. Go to https://git-scm.com/downloads and click download.
-```
-Version >= 2.34.1
-```
-2. During the installation setup, make sure to include OpenSSH. Recommenced setting should be fine:
-```
-Use bundled OpenSSH - This uses ssh.exe that comes with Git.
-```
-3. Leave the other settings as default, click through, and install.
-
-IMPORTANT: For Windows, run this app on the ```bash.exe``` terminal rather ```git-bash.exe```. There is a known issue with ```git-bash.exe``` messing up Python ```os``` commands in ```import os```. See this thread for details: https://stackoverflow.com/questions/33622087/composer-installation-error-output-is-not-a-tty-input-is-not-a-tty/33623136#33623136.
-* ```bash.exe``` can be found in your Git folder in the ```bin/``` directory.
-* For example: If ```git-bash.exe``` is here ```C:\Program Files\Git\git-bash.exe``` then you should find ```bash.exe``` here ```C:\Program Files\Git\bin\bash.exe```.
+In addition to the above, this app also requires the following:
+* Python3 (version >= 3.8) - Install Python3 here: https://www.python.org/downloads/. Check version with: ```python3 --version```
+* Pip3 (version >= 20.2.1) - Python3 should come with pip3. Check version with: ```pip3 --version```
 
 ## Installation
-This library is hosted on PyPi and can be installed via ```pip```:
+There are a couple of options to install this app:
+* Pip Install - This app is hosted on PyPi and can be installed with the following command:
 ```
 pip3 install PythonStarterPackage
+```
+* Local Install - Alternatively, you can download or git clone the Github repo and install it locally with the following:
+```
+git clone https://github.com/ArcticTechnology/PythonStarterPackage.git
+cd PythonStarterPackage
+pip3 install -e .
 ```
 
 ## Usage
@@ -41,11 +28,11 @@ After installation, you can run this app in your terminal with this command:
 ```
 pythonstarterpackage
 ```
-You can also run it with ```python3 -m```:
+You can also run with the python command ```python3 -m```:
 ```
 python3 -m pythonstarterpackage
 ```
-Further, you can import the package resources and run them in your own project:
+You can also import the package resources and run them in your own project:
 ```
 from pythonstarterpackage import *
 starter = StarterPkg()
@@ -53,7 +40,7 @@ starter.run()
 ```
 
 ## Documentation
-The purpose of this project is to show you how to create a standard python package from scratch. This project is inspired by @iamtennislover's excellent getmyip package (https://github.com/iamtennislover/getmyip) and @sigma-coding's great guide on deploying python packages (https://github.com/areed1192/sigma-coding).
+The purpose of this project is to show you how to create a standard python package from scratch. This project is inspired by this excellent getmyip package by @iamtennislover: https://github.com/iamtennislover/getmyip and this great guide on deploying python packages by @sigma-coding: https://github.com/areed1192/sigma-coding.
 
 ### Setup
 See "PythonStarterPackage Setup Guide.md" in ```doc/``` for a detailed walkthrough of what each of the package resources do. Once you have an understanding of this package, you can clone this package to your local directory and proceed to testing and deployment.
@@ -76,9 +63,9 @@ python3 -m pythonstarterpackage
 ```
 python3 ./test/test_main.py
 ```
-4. Once finished, delete the PythonStarterPackage.egg-info file and uninstall the package with:
+4. Once finished, delete the pythonstarterpackage.egg-info file and uninstall the package with:
 ```
-pip3 uninstall PythonStarterPackage
+pip3 uninstall pythonstarterpackage
 ```
 
 Note: It is recommended that you use a virtual environment when testing your package.
@@ -118,7 +105,7 @@ pythonstarterpackage
 ```
 5. After testing that it is working, uninstall the package from pip3.
 ```
-pip3 uninstall PythonStarterPackage
+pip3 uninstall pythonstarterpackage
 ```
 If there are any issues in the above you can always uninstall the package and delete the distributions then proceed to troubleshoot the issue. Once complete start over from the beginning. The commands below allows you to delete the distributions.
 ```
@@ -135,12 +122,44 @@ twine upload dist/*
 ```
 2. Install your package with ```pip```.
 ```
-pip3 install PythonStarterPackage
+pip3 install pythonstarterpackage
 ```
-Note: If you get a "Requirements already satisfied..." for PythonStarterPackage when trying to install, it may be because ```pip``` still thinks you have the package already installed from the testing earlier. To cleanly break that connection, simply delete the ```./src/PythonStarterPackage.egg-info```. Then try uninstalling and reinstalling again.
+Note: If you get a "Requirements already satisfied..." for pythonstarterpackage when trying to install, it may be because ```pip``` still thinks you have the package already installed from the testing earlier. To cleanly break that connection, simply delete the ```./src/PythonStarterPackage.egg-info```. Then try uninstalling and reinstalling again.
 
 3. Finally, run the app with: ```pythonstarterpackage```.
-4. Uninstall with: ```pip3 uninstall PythonStarterPackage```.
+4. Uninstall with: ```pip3 uninstall pythonstarterpackage```.
+
+## Troubleshooting
+This section goes over some of the common issues found and how to resolve them.
+
+### "Command Not Found" Error When Running the App
+On Linux, if you are getting a ```command not found``` error when trying to run the app, you may need to add ```~/.local/bin/``` to PATH. See this thread for details: https://stackoverflow.com/a/34947489. To add ```~/.local/bin/``` to PATH do the following:
+
+1. Add ```export PATH=~/.local/bin:$PATH``` to ```~/.bash_profile```.
+```
+echo export PATH=~/.local/bin:$PATH > ~/.bash_profile
+```
+2. Execute command.
+```
+source ~/.bash_profile
+```
+
+### Instructions for Git Bash
+For Windows and Mac, it is recommended to run this app on a linux emulation layer like the Git Bash terminal. Here are the instructions for installing and setting up Git Bash:
+1. Go to https://git-scm.com/downloads and click download.
+```
+Version >= 2.34.1
+```
+2. During the installation setup, make sure to include OpenSSH. Recommenced setting should be fine:
+```
+Use bundled OpenSSH - This uses ssh.exe that comes with Git.
+```
+3. Leave the other settings as default, click through, and install.
+4. Open ```bash.exe``` and install Python3 https://www.python.org/downloads/.
+5. Proceed to the "Installation" section to install this app.
+
+IMPORTANT: For Windows, use the ```bash.exe``` terminal rather ```git-bash.exe```. There is a known issue with ```git-bash.exe``` messing up Python ```os``` commands in ```import os```. See this thread for details: https://stackoverflow.com/a/33623136.
+* You can find ```bash.exe``` Git folder in the ```bin/``` directory. For example: If ```git-bash.exe``` is here ```C:\Program Files\Git\git-bash.exe``` then you should find ```bash.exe``` here ```C:\Program Files\Git\bin\bash.exe```.
 
 ## Support and Contributions
 Our software is open source and free for public use. If you found any of these repos useful and would like to support this project financially, feel free to donate to our bitcoin address.

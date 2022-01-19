@@ -2,7 +2,8 @@
 from pythonstarterpackage import *
 
 def test_main():
-	starterpkg = StarterPkg()
+	configparser = ConfigParser()
+	starterpkg = StarterPkg(configparser)
 	starterpkg.run()
 
 if __name__ == '__main__':
