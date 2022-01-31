@@ -4,11 +4,11 @@ This is a basic python starter package to be used as a template for creating you
 * PyPi: https://pypi.org/project/PythonStarterPackage/
 
 ## Prerequisites
-This app should would out of the box for Linux on a Linux terminal. For Windows and Mac, it is recommended to run this app on a linux emulation layer such as the Git Bash terminal. See the "Instructions for Git Bash" section for details.
+This app should would out of the box for Linux on a Linux terminal. For Windows and Mac, it is recommended to run this app on a Linux emulation layer such as the Git Bash terminal. See the "Instructions for Git Bash" section for details.
 
 In addition to the above, this app also requires the following:
-* Python3 (version >= 3.8) - Install Python3 here: https://www.python.org/downloads/. Check version with: ```python3 --version```
-* Pip3 (version >= 20.2.1) - Python3 should come with pip3. Check version with: ```pip3 --version```
+* Python3 (version >= 3.8) - Install Python3 here: https://www.python.org/downloads/. Check version with: ```python3 --version```.
+* Pip3 (version >= 20.2.1) - Make sure to install python3-pip in order to use pip install. Check version with: ```pip3 --version```.
 
 ## Installation
 There are a couple of options to install this app:
