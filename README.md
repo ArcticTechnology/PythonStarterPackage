@@ -4,11 +4,13 @@ This is a basic python starter package to be used as a template for creating you
 * PyPi: https://pypi.org/project/PythonStarterPackage/
 
 ## Prerequisites
-This app should would out of the box for Linux on a Linux terminal. For Windows and Mac, it is recommended to run this app on a Linux emulation layer such as the Git Bash terminal. See the "Instructions for Git Bash" section for details.
+For Windows, it is recommended to run this app on a Linux emulation layer such as the Git Bash terminal. See the "Instructions for Git Bash" section for details. In addition to Git Bash you will also need to install Python3 and Pip3 as described below.
 
-In addition to the above, this app also requires the following:
-* Python3 (version >= 3.8) - Install Python3 here: https://www.python.org/downloads/. Check version with: ```python3 --version```.
-* Pip3 (version >= 20.2.1) - Make sure to install python3-pip in order to use pip install. Check version with: ```pip3 --version```.
+For Mac and Linux, this app should would out of the box on the Linux or Mac terminal, but you must have Python3 and Pip3 as described below.
+
+This app requires the following:
+* Python3 (version 3.8 or greater) - Install Python3 here: https://www.python.org/downloads/. Check version with: ```python3 --version```.
+* Pip3 (version 20.2.1 or greater) - Make sure to install python3-pip in order to use pip install. Check version with: ```pip3 --version```.
 
 ## Installation
 There are a couple of options to install this app:
@@ -22,17 +24,23 @@ git clone https://github.com/ArcticTechnology/PythonStarterPackage.git
 cd PythonStarterPackage
 pip3 install -e .
 ```
+To uninstall this app:
+```
+pip3 uninstall PythonStarterPackage
+```
+* If you used the local install option, you will also want to delete the ```.egg-info``` file located in the ```/src``` directory of the package. This gets created automatically with ```pip3 install -e .```.
 
 ## Usage
-After installation, you can run this app in your terminal with this command:
+After installation, you have a couple ways to run this app.
+* Run this app from the terminal with this command:
 ```
 pythonstarterpackage
 ```
-You can also run with the python command ```python3 -m```:
+* Run this app with the python command ```python3 -m```:
 ```
 python3 -m pythonstarterpackage
 ```
-You can also import the package resources and run them in your own project:
+* You can also import the package resources and run them in your own project:
 ```
 from pythonstarterpackage import *
 starter = StarterPkg()
@@ -65,7 +73,7 @@ python3 ./test/test_main.py
 ```
 4. Once finished, delete the pythonstarterpackage.egg-info file and uninstall the package with:
 ```
-pip3 uninstall pythonstarterpackage
+pip3 uninstall PythonStarterPackage
 ```
 
 Note: It is recommended that you use a virtual environment when testing your package.
@@ -145,7 +153,7 @@ source ~/.bash_profile
 ```
 
 ### Instructions for Git Bash
-For Windows and Mac, it is recommended to run this app on a linux emulation layer like the Git Bash terminal. Here are the instructions for installing and setting up Git Bash:
+For Windows, it is recommended to run this app on a linux emulation layer like the Git Bash terminal. Here are the instructions for installing and setting up Git Bash:
 1. Go to https://git-scm.com/downloads and click download.
 ```
 Version >= 2.34.1
