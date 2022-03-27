@@ -9,6 +9,7 @@
 .config-d
 .config-example
 .config-NAKED
+.config-test
 .DS_Store
 .idea
 .installed.cfg
@@ -17,6 +18,8 @@
 .cache/
 .ipynb_checkpoints/
 .idea/
+__pycache__/
+bin/
 develop-eggs/
 node_modules/
 Libraries/
