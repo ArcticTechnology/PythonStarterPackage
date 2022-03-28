@@ -28,7 +28,7 @@ To uninstall this app:
 ```
 pip3 uninstall PythonStarterPackage
 ```
-* If you used the local install option, you will also want to delete the ```.egg-info``` file located in the ```/src``` directory of the package. This gets created automatically with ```pip3 install -e .```.
+* If you used the local install option, you will also want to delete the ```.egg-info``` file located in the ```src/``` directory of the package. This gets created automatically with ```pip3 install -e .```.
 
 ## Usage
 After installation, you have a couple ways to run this app.
