@@ -6,7 +6,7 @@ This is a basic python starter package to be used as a template for creating you
 ## Prerequisites
 For Windows, it is recommended to run this app on a Linux emulation layer such as the Git Bash terminal. See the "Instructions for Git Bash" section for details. In addition to Git Bash you will also need to install Python3 and Pip3 as described below.
 
-For Mac and Linux, this app should would out of the box on the Linux or Mac terminal, but you must have Python3 and Pip3 as described below.
+For Mac and Linux, this app should work out of the box on the Linux or Mac terminal, but you must have Python3 and Pip3 as described below.
 
 This app requires the following:
 * Python3 (version 3.8 or greater) - Install Python3 here: [https://www.python.org/downloads/]. Check version with: ```python3 --version```.
