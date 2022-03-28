@@ -9,7 +9,7 @@ For Windows, it is recommended to run this app on a Linux emulation layer such a
 For Mac and Linux, this app should would out of the box on the Linux or Mac terminal, but you must have Python3 and Pip3 as described below.
 
 This app requires the following:
-* Python3 (version 3.8 or greater) - Install Python3 here: https://www.python.org/downloads/. Check version with: ```python3 --version```.
+* Python3 (version 3.8 or greater) - Install Python3 here: [https://www.python.org/downloads/]. Check version with: ```python3 --version```.
 * Pip3 (version 20.2.1 or greater) - Make sure to install python3-pip in order to use pip install. Check version with: ```pip3 --version```.
 
 ## Installation
@@ -48,7 +48,7 @@ starter.run()
 ```
 
 ## Documentation
-The purpose of this project is to show you how to create a standard python package from scratch. This project is inspired by this excellent getmyip package by @iamtennislover: https://github.com/iamtennislover/getmyip and this great guide on deploying python packages by @sigma-coding: https://github.com/areed1192/sigma-coding.
+The purpose of this project is to show you how to create a standard python package from scratch. This project is inspired by this excellent getmyip package by @iamtennislover: [https://github.com/iamtennislover/getmyip] and this great guide on deploying python packages by @sigma-coding: [https://github.com/areed1192/sigma-coding].
 
 ### Setup
 See "PythonStarterPackage Setup Guide.md" in ```doc/``` for a detailed walkthrough of what each of the package resources do. Once you have an understanding of this package, you can clone this package to your local directory and proceed to testing and deployment.
@@ -141,7 +141,7 @@ Note: If you get a "Requirements already satisfied..." for pythonstarterpackage 
 This section goes over some of the common issues found and how to resolve them.
 
 ### "Command Not Found" Error When Running the App
-On Linux, if you are getting a ```command not found``` error when trying to run the app, you may need to add ```~/.local/bin/``` to PATH. See this thread for details: https://stackoverflow.com/a/34947489. To add ```~/.local/bin/``` to PATH do the following:
+On Linux, if you are getting a ```command not found``` error when trying to run the app, you may need to add ```~/.local/bin/``` to PATH. See this thread for details: [https://stackoverflow.com/a/34947489]. To add ```~/.local/bin/``` to PATH do the following:
 
 1. Add ```export PATH=~/.local/bin:$PATH``` to ```~/.bash_profile```.
 ```
@@ -163,10 +163,10 @@ Version >= 2.34.1
 Use bundled OpenSSH - This uses ssh.exe that comes with Git.
 ```
 3. Leave the other settings as default, click through, and install.
-4. Open ```bash.exe``` and install Python3 https://www.python.org/downloads/.
+4. Open ```bash.exe``` and install Python3 https://www.python.org/downloads/
 5. Proceed to the "Installation" section to install this app.
 
-IMPORTANT: For Windows, use the ```bash.exe``` terminal rather ```git-bash.exe```. There is a known issue with ```git-bash.exe``` messing up Python ```os``` commands in ```import os```. See this thread for details: https://stackoverflow.com/a/33623136.
+IMPORTANT: For Windows, use the ```bash.exe``` terminal rather ```git-bash.exe```. There is a known issue with ```git-bash.exe``` messing up Python ```os``` commands in ```import os```. See this thread for details: [https://stackoverflow.com/a/33623136].
 * You can find ```bash.exe``` Git folder in the ```bin/``` directory. For example: If ```git-bash.exe``` is here ```C:\Program Files\Git\git-bash.exe``` then you should find ```bash.exe``` here ```C:\Program Files\Git\bin\bash.exe```.
 
 ## Support and Contributions

@@ -2,7 +2,7 @@
 This guide will go over in depth what each of the contents in the PythonStarterPackage.
 
 ### Setup Files
-The setup.py and setup.cfg files are the core files that allow setuptools to build this package. See this guide on building and distributing packages with setuptools: https://setuptools.pypa.io/en/latest/userguide/quickstart.html
+The setup.py and setup.cfg files are the core files that allow setuptools to build this package. See this guide on building and distributing packages with setuptools: [https://setuptools.pypa.io/en/latest/userguide/quickstart.html].
 
 #### setup.py
 The setup.py file is the actual script that gets called when building the package with ```python3 setup.py sdist bdist_wheel```. In the past the configurations are written directly in setup.py, however convention has transitioned from hardcoding configurations into setup.py directly. There should only be one line of code in setup.py which is as follows:
@@ -11,7 +11,7 @@ from setuptools import setup; setup()
 ```
 
 #### setup.cfg
-Rather than hardcoding setup.py the convention is to put the package configuration details into setup.cfg This is often referred to as the declarative setup. The following will go over the specific instructions that setup.cfg file often contains. See this guide for more details: https://setuptools.pypa.io/en/latest/userguide/declarative_config.html
+Rather than hardcoding setup.py the convention is to put the package configuration details into setup.cfg This is often referred to as the declarative setup. The following will go over the specific instructions that setup.cfg file often contains. See this guide for more details: [https://setuptools.pypa.io/en/latest/userguide/declarative_config.html].
 
 1. ```[metadata]``` - This section contains all of the key metadata of the package such as name, version, license, etc.
 ```
@@ -40,7 +40,7 @@ classifiers =
 	Programming Language :: Python :: 3.11
 ```
 * ```version``` - Follows the convention: major.minor.maintenance
-* ```classifiers``` - See https://pypi.org/classifiers/ for list of classifiers.
+* ```classifiers``` - See [https://pypi.org/classifiers/] for list of classifiers.
 * Deployment status classifiers:
 ```
 Development Status :: 3 - Alpha
@@ -68,7 +68,7 @@ packages = find:
 where = src
 ```
 
-4. ```[options.entry_points]``` - This is where you define the entry points to your app. See this guide for more on entry points: https://setuptools.pypa.io/en/stable/userguide/entry_point.html
+4. ```[options.entry_points]``` - This is where you define the entry points to your app. See this guide for more on entry points: [https://setuptools.pypa.io/en/stable/userguide/entry_point.html]
 ```
 [options.entry_points]
 console_scripts =
@@ -100,7 +100,7 @@ Outside of setup.py and setup.cfg, additional package files include the followin
 ### Application Files
 The application files are located in src/pythonstarterpackage. This is the core directory containing all the files that make up your program. Each of the directories and subdirectories under src/pythonstarterpackage should contain an ```__init__.py``` which is what setuptools will be looking for to know what to include in build.
 * ```__init__.py``` - This allows setuptools to know what to include in build.
-* ```__main__.py``` - This allows execution on calling the name the directory: ```python3 -m pythonstarterpackage```. See: https://stackoverflow.com/questions/4042905/what-is-main-py
+* ```__main__.py``` - This allows execution on calling the name the directory: ```python3 -m pythonstarterpackage```. See: [https://stackoverflow.com/questions/4042905/what-is-main-py]
 * ```main.py``` - This is the main entry point to your app. This is the file that ```[options.entry_points]``` is pointing to in the setup.cfg file.
 * ```starterpkg.py``` - This is the the main python script for our app.
 * utils - This is the subdirectory of the pythonstarterpackage containing utility files for your program.
