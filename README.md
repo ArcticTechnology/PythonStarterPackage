@@ -4,11 +4,11 @@ This is a basic python starter package to be used as a template for creating you
 * PyPi: https://pypi.org/project/PythonStarterPackage/
 
 ## Prerequisites
-For Windows, it is recommended to run this app on a Linux emulation layer such as the Git Bash terminal. See the "Instructions for Git Bash" section for details. In addition to Git Bash you will also need to install Python3 and Pip3 as described below.
+For Windows, it is recommended to run this app on a Linux emulation layer such as the Git Bash terminal. See the "Instructions for Git Bash" section for details. In addition to Git Bash, make sure you also have Python3 and Pip3 as described below.
 
-For Mac and Linux, this app should work out of the box on the Linux or Mac terminal, but you must have Python3 and Pip3 as described below.
+For Mac and Linux, this app should work out of the box on the Linux or Mac terminal, but make sure you also have Python3 and Pip3 as described below.
 
-This app requires the following:
+Requirements:
 * Python3 (version 3.8 or greater) - Install Python3 here: [https://www.python.org/downloads/]. Check version with: ```python3 --version```.
 * Pip3 (version 20.2.1 or greater) - Make sure to install python3-pip in order to use pip install. Check version with: ```pip3 --version```.
 
@@ -150,6 +150,16 @@ echo export PATH=~/.local/bin:$PATH > ~/.bash_profile
 2. Execute command.
 ```
 source ~/.bash_profile
+```
+
+### "ImportError: No module named 'tkinter'
+Your python version is probably missing tkinter which typically comes default. See this post for details [https://stackoverflow.com/a/25905642]. Install it with the following:
+```
+sudo apt-get install python3-tk
+```
+For Mac, use this:
+```
+brew install python-tk
 ```
 
 ### Instructions for Git Bash
