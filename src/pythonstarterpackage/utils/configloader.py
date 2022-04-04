@@ -33,7 +33,7 @@ class ConfigParser:
 
 	def _get_configloc(self) -> str:
 		if self.env == 'build':
-			return Crawler.joinpath(dirname(dirname(dirname(self.rootpath))),
+			return Crawler.joinpath(dirname(dirname(dirname(dirname(self.rootpath)))),
 					self.build_loc)
 		elif self.env == 'dev':
 			return Crawler.joinpath(dirname(dirname(self.rootpath)),
