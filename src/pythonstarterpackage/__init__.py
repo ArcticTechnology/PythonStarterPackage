@@ -2,4 +2,4 @@
 __all__ = ['StarterPkg', 'ConfigParser']
 
 from .starterpkg import *
-from .utils.configparser import *
+from .utils.configloader import *

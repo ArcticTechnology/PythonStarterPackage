@@ -1,6 +1,6 @@
 #!/usr/bin/python3 -B
 from .starterpkg import StarterPkg
-from .utils.configparser import ConfigParser
+from .utils.configloader import ConfigParser
 
 def main():
 	configparser = ConfigParser()

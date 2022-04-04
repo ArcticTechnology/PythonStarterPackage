@@ -75,14 +75,14 @@ console_scripts =
 	pythonstarterpackage = pythonstarterpackage.main:main
 ```
 
-5. ```[options.package_data]``` - This defines files located inside your package that should be included in the build. Things like app assets, environmental variables, photos, etc.
+5. ```[options.package_data]``` - This defines the package data files located inside your package that should be included in the build. Things like app data, assets, environmental variables, etc.
 ```
 [options.package_data]
 data =
 	data/*.json
 ```
 
-6. ```[options.data_files]``` - This defines the files located outside your package that should be included in the build. Things like configurations, message catalogs, external data, sample data, etc.
+6. ```[options.data_files]``` - This defines the non-package data files located outside your package that should be included in the build. Things like documentation, configurations, message catalogs, external data, sample data, etc.
 ```
 [options.data_files]
 pythonstarterpackage/config = config/config.json
