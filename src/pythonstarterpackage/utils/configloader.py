@@ -1,16 +1,38 @@
-import os; import json
+# Dir Crawler: Basic Config Loader (No Encryption)
+# Copyright (c) 2022 Arctic Technology LLC
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+import json
+from os import stat
 from os.path import (
 	basename, dirname, exists, normpath
 )
 from .crawler import Crawler
-from .read import read_file
+from .filemodder import FileModder
 
-class ConfigParser:
+class ConfigLoader:
 
 	def __init__(self):
 		self.build_loc = 'pythonstarterpackage/config'
 		self.dev_loc = 'config'
-		self.possible_names = ['config.json']
+		self.possible_names = ['.config', '.config-d', '.config-NAKED', '.config-c']
 
 		self.rootpath = ''
 		self.env = ''
@@ -23,10 +45,10 @@ class ConfigParser:
 
 	def _get_env(self) -> str:
 		if self.rootpath == '': return ''
-		base = basename(normpath(dirname(self.rootpath)))
-		if base == 'site-packages':
+		filename = basename(normpath(dirname(self.rootpath)))
+		if filename == 'site-packages':
 			return 'build'
-		elif base == 'src':
+		elif filename == 'src':
 			return 'dev'
 		else:
 			return ''
@@ -41,7 +63,7 @@ class ConfigParser:
 		else:
 			return ''
 
-	def _get_configfile(self, filename) -> str:
+	def _get_configfile(self, filename: str) -> str:
 		if self.configloc == '': return ''
 		return Crawler.joinpath(self.configloc, filename)
 
@@ -55,28 +77,30 @@ class ConfigParser:
 			if exists(self.configfile):
 				return {'status': 200, 'message': 'Config file found.'}
 
-		return {'status': 400, 'message': 'Error: config file not found.'}
+		return {'status': 400, 'message': 'Warning: Config file not found.'}
 
-	def _hasContent(self, filepath):
-		if exists(filepath): return False
-		if os.stat(filepath).st_size > 0:
+	def hasContent(self) -> bool:
+		if exists(self.configfile) == False: return False
+		if stat(self.configfile).st_size > 0:
 			return True
 		else:
 			return False
 
-	def load(self):
+	def load(self) -> dict:
 		find = self._find()
-		if find['status'] == 400: return find['message']
-		if self._hasContent(self.configfile):
+		if find['status'] == 400:
+			return {'status': 400,
+					'message': find['message']}
+		if self.hasContent():
 			return {'status': 200,
-					'message': 'Config file loaded.'}
+					'message': 'Config file successfully loaded.'}
 		else:
 			return {'status': 400,
-					'message': 'Error: config file is empty.'}
+					'message': 'Warning: Config file is empty.'}
 
-	def parse(self):
+	def parse(self) -> dict:
 		try:
-			content = ''.join(read_file(self.configfile))
+			content = ''.join(FileModder.read_file(self.configfile))
 		except:
 			return {'status': 400,
 						'message': 'Error: config file could not be read.', 'data': None}
@@ -87,5 +111,5 @@ class ConfigParser:
 					'data': result}
 		except:
 			return {'status': 400,
-				'message': 'Error: config file not structured correctly.',
+				'message': 'Error: Failed to read config, invalid Json format.',
 				'data': None}

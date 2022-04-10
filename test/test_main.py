@@ -2,7 +2,7 @@
 from pythonstarterpackage import *
 
 def test_main():
-	configparser = ConfigParser()
+	configparser = ConfigLoader()
 	starterpkg = StarterPkg(configparser)
 	starterpkg.run()
 
