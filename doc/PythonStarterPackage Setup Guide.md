@@ -18,7 +18,7 @@ Rather than hardcoding setup.py the convention is to put the package configurati
 [metadata]
 name = PythonStarterPackage
 version = 0.1.1
-author = Arctic
+author = ArcticTechnology
 author_email = arctic.technology.mail@gmail.com
 license = MIT
 description = Python starter package, a template for creating your own python packages.
