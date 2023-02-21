@@ -6,5 +6,5 @@ def test_main():
 	starterpkg = StarterPkg(configparser)
 	starterpkg.run()
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 	raise SystemExit(test_main())

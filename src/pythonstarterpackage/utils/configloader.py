@@ -30,7 +30,7 @@ class ConfigLoader:
 	def __init__(self):
 		self.build_loc = 'pythonstarterpackage/config'
 		self.dev_loc = 'config'
-		self.possible_names = ['.config', '.config-d', '.config-NAKED', '.config-c']
+		self.possible_names = ['config.json']
 
 		self.rootpath = ''
 		self.env = ''
@@ -111,3 +111,16 @@ class ConfigLoader:
 			return {'status': 400,
 				'message': 'Error: Failed to read config, invalid Json format.',
 				'data': None}
+
+	def update(self, data):
+		if self.configfile == '':
+			return {'status': 400,
+						'message': 'Error: config file could not be written to.'}
+		try:
+			with open(self.configfile, 'w', encoding='utf-8') as f:
+				json.dump(data, f, ensure_ascii=False, indent=4)
+			return {'status': 200,
+						'message': 'Update config file complete.'}
+		except:
+			return {'status': 400,
+						'message': 'Error: config file could not be written to.'}
