@@ -1,9 +1,9 @@
 # Python Starter Package
 The purpose of this project is to show you how to create a standard python package from scratch. This project is inspired by this excellent getmyip package by @iamtennislover: [https://github.com/iamtennislover/getmyip] and this great guide on deploying python packages by @sigma-coding: [https://github.com/areed1192/sigma-coding].
 
-See [PythonStarterPackage_Tutorial.md](https://github.com/ArcticTechnology/PythonStarterPackage/blob/main/doc/PythonStarterPackage_Tutorial.md) in the ```doc/``` directory for a step-by-step setup guide and a detailed explanation of the package resources.
+See [PythonStarterPackage_Tutorial.md](https://github.com/ArcticTechnology/PythonStarterPackage/blob/main/doc/PythonStarterPackage_Tutorial.md) in the ```doc/``` directory for a step-by-step tutorial on how to deploy a package. If you are using this starter package for the first time, I definitely recommend doing the tutorial first.
 
-This package can also be used as the skeleton for when you first start building your own packages. To do this, follow the instructions below to install and test this package. 
+This package can also be used as the skeleton for each time you create a new package. Use the instructions below install, test, and deploy the package.
 
 Below are the Github and PyPi resources for this package.
 * Github repo: https://github.com/ArcticTechnology/PythonStarterPackage
