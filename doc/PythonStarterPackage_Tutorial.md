@@ -7,7 +7,7 @@ In order to create a Python package that can be used with ```pip```, it is stron
 This guide will go how to create a basic package that you can deploy with ```setuptools```.
 
 ### Set up Setuptools
-The two critical files at the heart of your package are ```setup.py``` and ```setup.cfg```. These two files are what provides the instructions for ```setuptools``` to build and distribute your packages. For details on ```setup.py``` and ```setup.cfg``` see this guide: [https://setuptools.pypa.io/en/latest/userguide/quickstart.html].
+The two critical files at the heart of your package are ```setup.py``` and ```setup.cfg```. These two files are what provides the instructions for ```setuptools``` to build and distribute your packages. Take a look at the ```setup.py``` and ```setup.cfg``` files in this package as a reference. For details on ```setup.py``` and ```setup.cfg``` see this guide: [https://setuptools.pypa.io/en/latest/userguide/quickstart.html].
 
 #### setup.py
 The ```setup.py``` file is the python file that is called when you build your package with the command ```python3 setup.py sdist bdist_wheel```. In the past the configurations are written directly into ```setup.py```. In some older packages, you may see ```setup.py``` with all of the configurations hardcoded on it. However, that is no longer the convention. The current convention is ```setup.py``` should ONLY have one line of code on it, which is:
@@ -18,7 +18,7 @@ from setuptools import setup; setup()
 #### setup.cfg
 Rather than hardcoding the configurations to your application on to ```setup.py```, the convention is to put these configurations into a ```setup.cfg``` file. This is often referred to as the declarative setup. See this guide on declarative setups for more details: [https://setuptools.pypa.io/en/latest/userguide/declarative_config.html].
 
-The ```setup.cfg``` is broken up into sections, denoted by brackets such as ```[metadata]```. Each section provides details about your application and instructions to ```setuptools``` on how to package up your application and how to deploy it. The following will go over the typical contents that you'll want to add to your ```setup.cfg``` file.
+The ```setup.cfg``` is broken up into sections, denoted by brackets such as ```[metadata]```. Each section provides details about your application and instructions to ```setuptools``` on how to package up your application and how to deploy it. Take a look at the ```setup.cfg``` file in this package as an example. This section will go over the typical contents that you'll find in a ```setup.cfg``` file.
 
 1. ```[metadata]``` - This section contains all of the key metadata of the package such as name, version, license, etc. It looks like the following:
 ```
@@ -148,7 +148,7 @@ virtualenv venv
 2. Activate the environment use: ```. venv/bin/activate```. On Windows it may be: ```. venv/Script/activate```.
 
 ### Dependency Mapping
-Next, make sure to check the package dependencies and update the setup.cfg file as needed. To do this:
+Next, make sure to check the package dependencies and update the ```setup.cfg``` file as needed. To do this:
 1. Create (or overwrite) the requirements.txt document with ```pipreqs```. This is an extremely useful tool because it automatically finds all of the relevant versions of dependencies your package relies on and puts them into the ```requirements.txt``` file. If you don't have ```pipreqs```, install it with ```pip install pipreqs```.
 ```
 pipreqs --force --encoding utf-8
@@ -186,7 +186,7 @@ rm -rf build dist src/*.egg-info
 BE CAREFUL not to miscopy the above command, as if you delete something you didn't intend you will not be able to retrieve it.
 
 ### Upload to PyPi
-In order to upload to PyPi make sure to set up your PyPi account first. See "PyPi Setup Guide.md" in ```doc/``` for more details. You will also need to have ```twine``` installed and upgraded. Once you have all of this setup do the following:
+In order to upload to PyPi make sure to set up your PyPi account first. See [PyPi Setup Guide.md](https://github.com/ArcticTechnology/PythonStarterPackage/blob/main/doc/PyPi_Setup_Guide.md) in ```doc/``` for more details. You will also need to have ```twine``` installed and upgraded. Once you have all of this setup do the following:
 
 1. Upload using ```twine```.
 ```
