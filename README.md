@@ -1,5 +1,11 @@
 # Python Starter Package
-This is a basic python starter package to be used as a template for creating your own python packages. See "PythonStarterPackage Setup Guide.md" in ```doc/``` for a detailed explanation of the package resources.
+The purpose of this project is to show you how to create a standard python package from scratch. This project is inspired by this excellent getmyip package by @iamtennislover: [https://github.com/iamtennislover/getmyip] and this great guide on deploying python packages by @sigma-coding: [https://github.com/areed1192/sigma-coding].
+
+See "PythonStarterPackage Tutorial.md" in the ```doc/``` directory for a step-by-step setup guide and a detailed explanation of the package resources.
+
+This package can also be used as the skeleton for when you first start building your own packages. To do this, follow the instructions below to install and test this package. 
+
+Below are the Github and PyPi resources for this package.
 * Github repo: https://github.com/ArcticTechnology/PythonStarterPackage
 * PyPi: https://pypi.org/project/PythonStarterPackage/
 
@@ -31,7 +37,7 @@ pip3 uninstall PythonStarterPackage
 * If you used the local install option, you will also want to delete the ```.egg-info``` file located in the ```src/``` directory of the package. This gets created automatically with ```pip3 install -e .```.
 
 ## Usage
-After installation, you have a couple ways to run this app.
+After installation, you have a few ways to run this app.
 * Run this app from the terminal with this command:
 ```
 pythonstarterpackage
@@ -48,48 +54,7 @@ starter.run()
 ```
 
 ## Documentation
-The purpose of this project is to show you how to create a standard python package from scratch. This project is inspired by this excellent getmyip package by @iamtennislover: [https://github.com/iamtennislover/getmyip] and this great guide on deploying python packages by @sigma-coding: [https://github.com/areed1192/sigma-coding].
-
-### Setup
-See "PythonStarterPackage Setup Guide.md" in ```doc/``` for a detailed walkthrough of what each of the package resources do. Once you have an understanding of this package, you can clone this package to your local directory and proceed to testing and deployment.
-
-### Testing
-In the directory containing the ```setup.py``` file, you can test the package by installing it in ```pip3``` editable mode. This will allow you make changes to it and test it without having to push the changes each time.
-1. Use ```pip3``` to install the package in editable mode:
-```
-pip3 install -e .
-```
-2. Run the package by calling the package directly:
-```
-pythonstarterpackage
-```
-Or use ```python3 -m```:
-```
-python3 -m pythonstarterpackage
-```
-3. Testing the import. Run the ```test_main.py``` file:
-```
-python3 ./test/test_main.py
-```
-4. Once finished, delete the pythonstarterpackage.egg-info file and uninstall the package with:
-```
-pip3 uninstall PythonStarterPackage
-```
-
-Note: It is recommended that you use a virtual environment when testing your package.
-1. To create a virtual environment:
-```
-virtualenv venv
-```
-2. Activate the environment use: ```. venv/bin/activate```. On Windows it may be: ```. venv/Script/activate```.
-
-### Dependency Mapping
-Next, make sure to check the package dependencies and update the setup.cfg file as needed. To do this:
-1. Create (or overwrite) the requirements.txt document with ```pipreqs```. This is an extremely useful tool because it automatically finds all of the relevant versions of dependencies your package relies on and puts them into the ```requirements.txt``` file. If you don't have ```pipreqs```, install it with ```pip install pipreqs```.
-```
-pipreqs --force --encoding utf-8
-```
-2. Once the ```requirements.txt``` is updated, check to see if there is any additional dependencies that need to be added or updated in setup.cfg under the ```install_requires =```. If so, add or update it.
+To deploy this package, first, make sure you have gone through the "PythonStarterPackage Tutorial.md" in the ```doc/``` directory. Once you have a good understanding of how to implement your own package and assuming you have mapped dependencies and tested the package, you can use the following to deploy your package.
 
 ### Deployment
 Once the package is ready, we can work on deploying the package.
@@ -115,14 +80,14 @@ pythonstarterpackage
 ```
 pip3 uninstall pythonstarterpackage
 ```
-If there are any issues in the above you can always uninstall the package and delete the distributions then proceed to troubleshoot the issue. Once complete start over from the beginning. The commands below allows you to delete the distributions.
+If there are any issues in the above you can always uninstall the package and delete the distributions then proceed to troubleshoot the issue. Once complete start over from the beginning. The commands below allow you to delete the distributions.
 ```
 rm -rf build dist src/*.egg-info
 ```
-BE CAREFUL not to miss copy the above command, as if you delete something you didn't intend you will not be able to retrieve.
+BE CAREFUL not to miscopy the above command, as if you delete something you didn't intend you will not be able to retrieve it.
 
 ### Upload to PyPi
-In order to upload to PyPi make sure to setup your PyPi account first. See "PyPi Setup Guide.md" in ```doc/``` for more details. You will also need to have ```twine``` installed and upgraded. Once you have all of this setup do the following:
+In order to upload to PyPi make sure to set up your PyPi account first. See "PyPi Setup Guide.md" in ```doc/``` for more details. You will also need to have ```twine``` installed and upgraded. Once you have all of this setup do the following:
 
 1. Upload using ```twine```.
 ```
@@ -168,7 +133,7 @@ For Windows, it is recommended to run this app on a linux emulation layer like t
 ```
 Version >= 2.34.1
 ```
-2. During the installation setup, make sure to include OpenSSH. Recommenced setting should be fine:
+2. During the installation setup, make sure to include OpenSSH. The recommended setting should be fine:
 ```
 Use bundled OpenSSH - This uses ssh.exe that comes with Git.
 ```
